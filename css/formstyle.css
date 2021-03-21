@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightcoral;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.menu>ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    padding: 0 .5rem 0 .5rem;
+    margin: .75rem 0 0 0;
+}
+
+.menu>ul>li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title-container {
+    flex: 0.25;
+    background-color: white;
+}
+
+header {
+    flex: 0.25;
+}
+
+form {
+    flex: 4;
+}
+
+h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.4rem 0 0.2rem 0;
+}

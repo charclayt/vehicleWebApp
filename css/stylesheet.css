@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.menu>ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    padding: 0 .5rem 0 .5rem;
+    margin: .75rem 0 0 0;
+}
+
+.menu>ul>li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    flex: 0.25;
+    background-color: white;
+}
+
+#title-container {
+    flex: 0.25;
+    background-color: white;
+}
+
+#content-container {
+    flex: 4.5;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #f5cb13;
+    overflow: scroll;
+}
+
+#footer-container {
+    flex: 0.75;
+    display: flex;
+    flex-flow: row nowrap;
+    orientation: fixed;
+}
+
+.icon-link {
+    padding: 0.75rem;
+}
+
+.selected-vehicle-info {
+    /* */
+}
+
+h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.4rem 0 0.2rem 0;
+}
+
+img#icon {
+    max-width: 100%;
+    height: auto;
+}

@@ -44,7 +44,7 @@ body {
 }
 
 #footer-container {
-    flex: 0.75;
+    flex: 0.5;
     display: flex;
     flex-flow: row nowrap;
     orientation: fixed;

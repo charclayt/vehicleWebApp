@@ -5,8 +5,10 @@ $dbuser = "root";
 $dbpassword = "";
 $dbname = "vehiclewebapp";
 
-if(!$con = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname))
+$con = new mysqli($dbhost,$dbuser,$dbpassword,$dbname);
+
+if ($con->connect_error)
 {
-    die("failed to connect!");
+    die("connection failed!" . $con->connect_error);
 }
 

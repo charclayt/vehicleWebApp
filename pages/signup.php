@@ -50,10 +50,10 @@ session_start();
             <fieldset>
                 <legend>Sign up</legend>
                 <ol>
-                    <li><label for="form-signup-email">Email:</label>
-                    <input type="email" name="email" id="form-signup-email"></li>
-                    <li><label for="form-signup-password">Password:</label>
-                    <input type="password" name="password" id="form-signup-password"></li>
+                    <li><label for="email">Email:</label>
+                    <input type="email" name="email" id="email"></li>
+                    <li><label for="password">Password:</label>
+                    <input type="password" name="password" id="password"></li>
                 </ol>
                 <p><input type="submit" value="Sign up"></p>
             </fieldset>

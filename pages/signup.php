@@ -17,7 +17,7 @@ session_start();
 
             mysqli_query($con, $query);
 
-            header("location: login.php");
+            header("location: ../pages/login.php");
             die;
         }
             

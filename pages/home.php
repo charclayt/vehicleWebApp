@@ -44,8 +44,8 @@ session_start();
             </div>
             <div class="content">
                 <p>Savings tracker</p>
-                <p></p>
-                <p></p>
+                <p>Hello, <?php echo $user_data['email']; ?></p>
+                <p> <a href="../php/logout.php">Logout</a></p>
             </div>
         </div>
 

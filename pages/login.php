@@ -13,7 +13,7 @@ session_start();
         if(!empty($user_name) && !empty($password))
         {
             //save to database
-            $query = "SELECT * FROM `users` where `email` = '$user_name' LIMIT 1";
+            $query = "SELECT * FROM `users` WHERE `email` = '$user_name' LIMIT 1";
             $result = mysqli_query($con, $query);
 
             if ($result)
@@ -24,7 +24,7 @@ session_start();
 
                     if ($user_data['password'] === $password)
                     {
-                        $_SESSION['id'] = $user_data['id'];
+                        $_SESSION['user_id'] = $user_data['user_id'];
                         header("Location: ../pages/home.php");
                         die;
                     }

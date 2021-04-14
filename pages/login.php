@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-    include("connection.php");
-    include("functions.php");
+    include("./php/connection.php");
+    include("./php/functions.php");
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ session_start();
 
             <input type="submit" value="Log in"><br>
 
-            <a href="../pages/signup.html">Sign Up</a>
+            <a href="./signup.php">Sign Up</a>
         </form>
     </div>
 </body>

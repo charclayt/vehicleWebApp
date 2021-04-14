@@ -13,11 +13,11 @@ session_start();
         if(!empty($user_name) && !empty($password))
         {
             //save to database
-            $query = "INSERT INTO 'users' ('email','password') VALUES ('$user_name','$password')";
+            $query = "INSERT INTO `users` (`id`,`email`,`password`) VALUES ('','$user_name','$password')";
 
             mysqli_query($con, $query);
 
-            header("location: ../pages/login.php");
+            header("Location: ../pages/login.php");
             die;
         }
             
@@ -46,7 +46,7 @@ session_start();
 
         </header>
 
-        <form action="../php/signup.php" method="POST">
+        <form method="POST">
             <fieldset>
                 <legend>Sign up</legend>
                 <ol>

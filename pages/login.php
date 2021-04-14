@@ -22,7 +22,7 @@ session_start();
 
         </header>
 
-        <form action="../php/login.php" method="POST">
+        <form method="POST">
             <!-- <fieldset>
                 <legend>Welcome back!</legend>
                 <ul>

@@ -3,6 +3,42 @@ session_start();
 
     include("../php/connection.php");
     include("../php/functions.php");
+
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        //something was posted
+        $user_name = $_POST['email'];
+        $password = $_POST['password'];
+
+        if(!empty($user_name) && !empty($password))
+        {
+            //save to database
+            $query = "SELECT * FROM `users` where `email` = '$user_name' LIMIT 1";
+            $result = mysqli_query($con, $query);
+
+            if ($result)
+            {
+                if ($result && mysqli_num_rows($result) > 0)
+                {
+                    $user_data = mysqli_fetch_assoc($result);
+
+                    if ($user_data['password'] === $password)
+                    {
+                        $_SESSION['id'] = $user_data['id'];
+                        header("Location: ../pages/home.php");
+                        die;
+                    }
+                }
+            }
+
+            echo "Wrong username or Password!"           
+        }
+            
+        else
+        {
+            echo "Wrong username or Password!";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -34,8 +70,8 @@ session_start();
                 <p><input type="submit" value="Log in"></p>
                 <a href="../pages/signup.html">Sign Up</a>
             </fieldset> -->
-            <input type="email" name="email" id="form-login-email"><br>
-            <input type="password" name="password" id="form-login-password"><br>
+            <input type="email" name="email" id="email"><br>
+            <input type="password" name="password" id="password"><br>
 
             <input type="submit" value="Log in"><br>
 

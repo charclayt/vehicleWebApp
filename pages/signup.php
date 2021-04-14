@@ -13,7 +13,7 @@ session_start();
         if(!empty($user_name) && !empty($password))
         {
             //save to database
-            $query = "insert into users (email,password) values ('$user_name','$password')";
+            $query = "INSERT INTO 'users' ('email','password') VALUES ('$user_name','$password')";
 
             mysqli_query($con, $query);
 

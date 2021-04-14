@@ -24,7 +24,7 @@ session_start();
 
                     if ($user_data['password'] === $password)
                     {
-                        $_SESSION['user_id'] = $user_data['user_id'];
+                        $_SESSION['id'] = $user_data['id'];
                         header("Location: ../pages/home.php");
                         die;
                     }

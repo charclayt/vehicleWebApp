@@ -24,9 +24,9 @@ session_start();
         <header id="header">
             <nav class="menu">
                 <ul>
-                    <li><a href="maintenance.html"><img id="icon" src="../images/maintenance.png" alt="Maintenance icon"></a></li>
-                    <li><a href="home.html"><img id="icon" src="../images/home.png" alt="Home icon"></a></li>
-                    <li><a href="modifications.html"><img id="icon" src="../images/modifications.png" alt="Modification icon"></a></li>
+                    <li><a href="maintenance.php"><img id="icon" src="../images/maintenance.png" alt="Maintenance icon"></a></li>
+                    <li><a href="home.php"><img id="icon" src="../images/home.png" alt="Home icon"></a></li>
+                    <li><a href="modifications.php"><img id="icon" src="../images/modifications.png" alt="Modification icon"></a></li>
                 </ul>
             </nav>
         </header>
@@ -51,7 +51,7 @@ session_start();
 
         <div id="footer-container">
             <div class="icon-link">
-                <a href="garage.html"><img id="garage-icon" src="../images/garage.png" alt="Garage icon"></a>
+                <a href="garage.php"><img id="garage-icon" src="../images/garage.png" alt="Garage icon"></a>
             </div>
             <div class="selected-vehicle-info">
                 <p>Vehicle selected info</p>

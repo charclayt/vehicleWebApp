@@ -23,9 +23,9 @@ session_start();
         <header id="header">
             <nav class="menu">
                 <ul>
-                    <li><a href="maintenance.html"><img id="icon" src="../images/maintenance.png" alt="Maintenance icon"></a></li>
-                    <li><a href="home.html"><img id="icon" src="../images/home.png" alt="Home icon"></a></li>
-                    <li><a href="modifications.html"><img id="icon" src="../images/modifications.png" alt="Modification icon"></a></li>
+                    <li><a href="maintenance.php"><img id="icon" src="../images/maintenance.png" alt="Maintenance icon"></a></li>
+                    <li><a href="home.php"><img id="icon" src="../images/home.png" alt="Home icon"></a></li>
+                    <li><a href="modifications.php"><img id="icon" src="../images/modifications.png" alt="Modification icon"></a></li>
                 </ul>
             </nav>
         </header>

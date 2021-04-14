@@ -7,8 +7,8 @@ session_start();
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
         //something was posted
-        $user_name = $_POST['form-signup-email'];
-        $password = $_POST['form-signup-password'];
+        $user_name = $_POST['email'];
+        $password = $_POST['password'];
 
         if(!empty($user_name) && !empty($password))
         {

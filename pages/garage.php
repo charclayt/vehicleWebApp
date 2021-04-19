@@ -44,7 +44,7 @@ session_start();
                     while($row = $result->fetch_assoc())
                     {
 			            echo "<div class='content'>";
-                        echo $row['make'] ,$row['model'], $row['manufacture_year'] ,"<br>";
+                        echo $row['make'] , " ", $row['model'], " ", $row['manufacture_year'] ,"<br>";
 			            echo "</div>";
                     }
                 }

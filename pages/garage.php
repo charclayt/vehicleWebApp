@@ -45,12 +45,15 @@ session_start();
                     {
 			            echo "<div class='garage-content'>";
                         echo $row['make'] , " ", $row['model'], " ", $row['manufacture_year'] ,"<br>";
+                        echo "<form method='POST'";
+                        echo "<input type='submit' value='Select vehicle'>";
+                        echo "</form>";
 			            echo "</div>";
                     }
                 }
                 else
                 {
-                    echo "please add new vehicle";
+                    echo "Please add new vehicle";
                 }
                 ?>
         </div>

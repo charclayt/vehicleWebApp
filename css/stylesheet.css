@@ -59,7 +59,9 @@ body {
 }
 
 .garage-content {
-    padding-top: 5%;
+    display: flex;
+    padding-top: 15%;
+    padding-left: 10%;
 }
 
 h1 {

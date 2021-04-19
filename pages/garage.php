@@ -53,12 +53,6 @@ session_start();
                     echo "please add new vehicle";
                 }
                 ?>
-            <div class="content">
-
-            </div>
-            <div class="content">
-
-            </div>
         </div>
 
         <div id="footer-container">

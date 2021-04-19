@@ -40,8 +40,17 @@ session_start();
 
         <div id="content-container">
             <div class="content">
-                <p> <?php echo $vehicle_data['make'] ,$vehicle_data['model'], $vehicle_data['manufacture_year']; ?>
-                
+                <p> <?php 
+                if($vehicle_data != null)
+                {
+                    echo $vehicle_data['make'] ,$vehicle_data['model'], $vehicle_data['manufacture_year']; 
+                }
+                else
+                {
+                    echo "please add new vehicle";
+                }
+                ?>
+                </p>
             </div>
             <div class="content">
 

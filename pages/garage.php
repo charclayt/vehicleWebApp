@@ -38,13 +38,14 @@ session_start();
         </div>
 
         <div id="content-container">
-            <div class="content">
-                <p> <?php 
+                <?php 
                 if($result->num_rows > 0)
                 {
                     while($row = $result->fetch_assoc())
                     {
+			            echo "<div class='content'>";
                         echo $row['make'] ,$row['model'], $row['manufacture_year'] ,"<br>";
+			            echo "</div>";
                     }
                 }
                 else
@@ -52,8 +53,6 @@ session_start();
                     echo "please add new vehicle";
                 }
                 ?>
-                </p>
-            </div>
             <div class="content">
 
             </div>

@@ -5,6 +5,10 @@ session_start();
     include("../php/functions.php");
 
     $user_data = check_login($con);
+
+    $query = "SELECT * FROM `vehicle_info` WHERE `user_email` = '$user_data[email]'";
+    $result = mysqli_query($con, $query);
+    $vehicle_data = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +40,8 @@ session_start();
 
         <div id="content-container">
             <div class="content">
-
+                <p> <?php echo $vehicle_data['make'] ,$vehicle_data['model'], $vehicle_data['manufacture_year']; ?>
+                
             </div>
             <div class="content">
 

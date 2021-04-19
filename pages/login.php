@@ -25,7 +25,7 @@ session_start();
                     if ($user_data['password'] === $password)
                     {
                         $_SESSION['id'] = $user_data['id'];
-                        header("Location: ../pages/home.php");
+                        header("Location: ../pages/garage.php");
                         die;
                     }
                 }

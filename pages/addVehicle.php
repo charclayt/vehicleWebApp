@@ -5,6 +5,30 @@ session_start();
     include("../php/functions.php");
 
     $user_data = check_login($con);
+
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        $user_id = $user_data['email'];
+        $make = $_POST['vehicle-make'];
+        $model = $_POST['vehicle-model'];
+        $year = $_POST['vehicle-manufacture-year'];
+
+        if(!empty($make) && !empty($model) && !empty($year))
+        {
+            $query = "INSERT INTO `vehicle_info` (`id`, `user_email`, `make`, `model`, `manufacture_year`, `image_filename`) VALUES ('', '$user_id', '$make', '$model', '$year', '')";
+
+            mysqli_query($con, $query);
+
+            header("Location: ../pages/garage.php");
+            die;
+        }
+
+        else
+        {
+            echo "please complete information fields";
+        }
+    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -34,16 +58,15 @@ session_start();
             <h1><span>ADD VEHICLE</span></h1>
         </div>
 
-        <form action="../php/addNewVehicle.php" method="POST">
+        <form method="POST">
             <fieldset>
                 <ol>
-                    <li><label for="form-new-vehicle-make">Make:</label>
-                    <input type="text" name="make" id="form-new-vehicle-make"></li>
-                    <li><label for="form-new-vehicle-model">Model:</label>
-                    <input type="text" name="model" id="form-new-vehicle-model"></li>
-                    <li><label for="form-new-vehicle-manufacture-year">Year of manufacture:</label>
-                    <input type="number" name="manufacture-year" id="form-new-vehicle-manufacture-year"></li>
-                    <li><label for=""</li>
+                    <li><label for="vehicle-make">Make:</label>
+                    <input type="text" name="vehicle-make" id="vehicle-make"></li>
+                    <li><label for="vehicle-model">Model:</label>
+                    <input type="text" name="vehicle-model" id="vehicle-model"></li>
+                    <li><label for="vehicle-manufacture-year">Year of manufacture:</label>
+                    <input type="number" name="vehicle-manufacture-year" id="vehicle-manufacture-year"></li>
                 </ol>
             </fieldset>
         </form>

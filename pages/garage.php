@@ -6,9 +6,8 @@ session_start();
 
     $user_data = check_login($con);
 
-    $query = "SELECT * FROM `vehicle_info` WHERE `user_email` = '$user_data[email]'";
+    $query = "SELECT * FROM `vehicle_info` WHERE `user_email` = '$user_data[email]' ORDER BY `id`";
     $result = mysqli_query($con, $query);
-    $vehicle_data = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -41,9 +40,12 @@ session_start();
         <div id="content-container">
             <div class="content">
                 <p> <?php 
-                if($vehicle_data != null)
+                if($result->num_rows > 0)
                 {
-                    echo $vehicle_data['make'] ,$vehicle_data['model'], $vehicle_data['manufacture_year']; 
+                    while($row = $result->fetch_assoc())
+                    {
+                        echo $row['make'] ,$row['model'], $row['manufacture_year'] ,"<br>";
+                    }
                 }
                 else
                 {

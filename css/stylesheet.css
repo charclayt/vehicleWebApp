@@ -58,6 +58,10 @@ body {
     /* */
 }
 
+.garage-content {
+    padding-top: 5%;
+}
+
 h1 {
     font-size: 1rem;
     text-align: center;

@@ -28,7 +28,7 @@ session_start();
             echo "please complete information fields";
         }
     }
-    
+
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +68,7 @@ session_start();
                     <li><label for="vehicle-manufacture-year">Year of manufacture:</label>
                     <input type="number" name="vehicle-manufacture-year" id="vehicle-manufacture-year"></li>
                 </ol>
+                <p><input type="submit" value="Add vehicle"></p>
             </fieldset>
         </form>
     </div>

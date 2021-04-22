@@ -54,7 +54,16 @@ session_start();
                 <a href="garage.php"><img id="garage-icon" src="../images/garage.png" alt="Garage icon"></a>
             </div>
             <div class="selected-vehicle-info">
-                <p>Vehicle selected info</p>
+            <?php
+                if ($selected_vehicle->num_rows > 0)
+                {
+                    echo $selected_vehicle['make'], " ", $Selected_vehicle['model'], " ", $selected_vehicle['manufacture_year'];
+                }
+                else
+                {
+                    echo "Please select vehicle";
+                }
+                ?>
             </div>
         </div>
     </div>

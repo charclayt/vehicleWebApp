@@ -8,7 +8,31 @@ session_start();
 
     $query = "SELECT * FROM `vehicle_info` WHERE `user_email` = '$user_data[email]' ORDER BY `id`";
     $result = mysqli_query($con, $query);
-?>
+
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        $selected_vehicle = $_POST['selected_vehicle'];
+
+        $result = mysqli_query($con, "SELECT * FROM `selected_vehicle` WHERE `user_email` = '$user_data[email]' LIMIT 1");
+
+        if($result && mysqli_num_rows($result) > 0)
+        {
+            $query = "UPDATE `selected_vehicle` SET (`id`,`user_email`,`vehicle_id`)=('','$user_data[email]','$selected_vehicle') WHERE `user_email` = '$user_data[email]' LIMIT 1";
+
+            mysqli_query($con, $query);
+
+            die;
+        }
+        else
+        {
+            $query = "INSERT INTO `selected_vehicle` (`id`,`user_email`,`vehicle_id`) VALUES ('','$user_data[email]','$selected_vehicle')";
+
+            mysqli_query($con, $query);
+
+            die;
+        }
+    }
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">

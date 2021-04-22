@@ -11,13 +11,13 @@ session_start();
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-        $selected_vehicle = $_POST['selected_vehicle'];
+        $select_vehicle = $_POST['select_vehicle'];
 
         $result = mysqli_query($con, "SELECT * FROM `selected_vehicle` WHERE `user_email` = '$user_data[email]' LIMIT 1");
 
         if($result && mysqli_num_rows($result) > 0)
         {
-            $query = "UPDATE `selected_vehicle` SET (`id`,`user_email`,`vehicle_id`)=('','$user_data[email]','$selected_vehicle') WHERE `user_email` = '$user_data[email]' LIMIT 1";
+            $query = "UPDATE `selected_vehicle` SET `vehicle_id`='$select_vehicle' WHERE `user_email` = '$user_data[email]' LIMIT 1";
 
             mysqli_query($con, $query);
 
@@ -25,7 +25,7 @@ session_start();
         }
         else
         {
-            $query = "INSERT INTO `selected_vehicle` (`id`,`user_email`,`vehicle_id`) VALUES ('','$user_data[email]','$selected_vehicle')";
+            $query = "INSERT INTO `selected_vehicle` (`id`,`user_email`,`vehicle_id`) VALUES ('','$user_data[email]','$select_vehicle')";
 
             mysqli_query($con, $query);
 
@@ -70,7 +70,7 @@ session_start();
 			            echo "<div class='garage-content'>";
                         echo "<form method='POST'>";
                         echo $row['make'] , " ", $row['model'], " ", $row['manufacture_year'] ,"<br>";
-                        echo "<input type='hidden' id='selected_vehicle' name='selected_vehicle' value='{$row['id']}'>";
+                        echo "<input type='hidden' id='select_vehicle' name='select_vehicle' value='{$row['id']}'>";
                         echo "<input type='submit' value='Select vehicle'>";
                         echo "</form>";
 			            echo "</div>";
@@ -88,7 +88,9 @@ session_start();
                 <a href="addVehicle.php"><img id="addLog-icon" src="../images/add.png" alt="Add log icon"></a>
             </div>
             <div class="content">
+                <?php
                 
+                ?>
             </div>
         </div>
     </div>

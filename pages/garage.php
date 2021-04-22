@@ -6,7 +6,7 @@ session_start();
 
     $user_data = check_login($con);
 
-    $selected_vehicle = selected_vehicle($user_data['email'], $con);
+    $selected_vehicle = selected_vehicle($con, $user_data['email']);
 
     $query = "SELECT * FROM `vehicle_info` WHERE `user_email` = '$user_data[email]' ORDER BY `id`";
     $result = mysqli_query($con, $query);
@@ -23,6 +23,7 @@ session_start();
 
             mysqli_query($con, $query);
 
+            header ("Location: ../pages/home.php");
             die;
         }
         else
@@ -31,6 +32,7 @@ session_start();
 
             mysqli_query($con, $query);
 
+            header ("Location: ../pages/home.php");
             die;
         }
     }
@@ -91,13 +93,13 @@ session_start();
             </div>
             <div class="content">
                 <?php
-                if ($selected_vehicle->num_rows > 0)
+                if (!empty($selected_vehicle))
                 {
-                    echo $selected_vehicle['make'], " ", $Selected_vehicle['model'], " ", $selected_vehicle['manufacture_year'];
+                    echo $selected_vehicle['make'], " ", $selected_vehicle['model'], " ", $selected_vehicle['manufacture_year'];
                 }
                 else
                 {
-                    echo "Please select vehicle";
+                    echo $selected_vehicle;
                 }
                 ?>
             </div>

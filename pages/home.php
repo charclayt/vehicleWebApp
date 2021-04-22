@@ -5,6 +5,8 @@ session_start();
     include("../php/functions.php");
 
     $user_data = check_login($con);
+
+    $selected_vehicle = selected_vehicle($con, $user_data['email']);
 ?>
 
 <!DOCTYPE html>
@@ -55,9 +57,9 @@ session_start();
             </div>
             <div class="selected-vehicle-info">
             <?php
-                if ($selected_vehicle->num_rows > 0)
+                if (!empty($selected_vehicle))
                 {
-                    echo $selected_vehicle['make'], " ", $Selected_vehicle['model'], " ", $selected_vehicle['manufacture_year'];
+                    echo $selected_vehicle['make'], " ", $selected_vehicle['model'], " ", $selected_vehicle['manufacture_year'];
                 }
                 else
                 {

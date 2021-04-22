@@ -5,6 +5,8 @@ session_start();
     include("../php/functions.php");
 
     $user_data = check_login($con);
+
+    $selected_vehicle = selected_vehicle($con, $user_data['email']);
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +53,16 @@ session_start();
                 <a href="addModificationLog.php"><img id="addLog-icon" src="../images/addLog.png" alt="Add log icon"></a>
             </div>
             <div class="selected-vehicle-info">
-                <p>Vehicle selected info</p>
+                <?php
+                if (!empty($selected_vehicle))
+                {
+                    echo $selected_vehicle['make'], " ", $selected_vehicle['model'], " ", $selected_vehicle['manufacture_year'];
+                }
+                else
+                {
+                    echo $selected_vehicle;
+                }
+                ?>
             </div>
         </div>
     </div>

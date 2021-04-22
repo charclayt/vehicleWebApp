@@ -8,6 +8,7 @@ function check_login($con)
         $query = "SELECT * FROM `users` WHERE `id` = '$id' LIMIT 1";
 
         $result = mysqli_query($con,$query);
+
         if($result && mysqli_num_rows($result) > 0)
         {
             $user_data = mysqli_fetch_assoc($result);
@@ -15,18 +16,22 @@ function check_login($con)
         }
     }
 
-//redirect to login
+    //redirect to login
 
-header("location: ../pages/login.php");
-die;
+    header("location: ../pages/login.php");
+    die;
 }
 
-function selected_vehicle($user_email, $con)
+function selected_vehicle($con, $user_email)
 {
-    $query1 = "SELECT `vehicle_id` FROM `selected_vehicle` WHERE `user_email` = '$user_email' LIMIT 1";
-    $query2 = "SELECT * FROM `vehicle_info` WHERE `id` = '$query1' LIMIT 1";
+    $query1 = mysqli_query($con, "SELECT `vehicle_id` FROM `selected_vehicle` WHERE `user_email` = '$user_email' LIMIT 1");
+    $query1_result = mysqli_fetch_assoc($query1);
 
-    $result = mysqli_query($con, $query1, $query2);
+    $query2 = "SELECT * FROM `vehicle_info` WHERE `id` = '$query1_result[vehicle_id]' LIMIT 1";
 
-    return $result;
+    $result = mysqli_query($con, $query2);
+
+    $final = mysqli_fetch_assoc($result);
+
+    return $final;   
 }

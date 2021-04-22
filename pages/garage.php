@@ -44,8 +44,9 @@ session_start();
                     while($row = $result->fetch_assoc())
                     {
 			            echo "<div class='garage-content'>";
-                        echo $row['make'] , " ", $row['model'], " ", $row['manufacture_year'] ,"<br>";
                         echo "<form method='POST'";
+                        echo $row['make'] , " ", $row['model'], " ", $row['manufacture_year'] ,"<br>";
+                        echo "<input type='hidden' id='selected_vehicle' name='selected_vehicle' value='{$row['id']}'>";
                         echo "<input type='submit' value='Select vehicle'>";
                         echo "</form>";
 			            echo "</div>";

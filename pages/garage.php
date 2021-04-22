@@ -6,6 +6,8 @@ session_start();
 
     $user_data = check_login($con);
 
+    $selected_vehicle = selected_vehicle($user_data['email'], $con);
+
     $query = "SELECT * FROM `vehicle_info` WHERE `user_email` = '$user_data[email]' ORDER BY `id`";
     $result = mysqli_query($con, $query);
 
@@ -89,7 +91,14 @@ session_start();
             </div>
             <div class="content">
                 <?php
-                
+                if ($selected_vehicle->num_rows > 0)
+                {
+                    echo $selected_vehicle['make'], " ", $Selected_vehicle['model'], " ", $selected_vehicle['manufacture_year'];
+                }
+                else
+                {
+                    echo "Please select vehicle";
+                }
                 ?>
             </div>
         </div>

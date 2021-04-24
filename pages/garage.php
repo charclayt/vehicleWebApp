@@ -51,16 +51,6 @@ session_start();
 
 <body>
     <div class="container">
-        <header id="header">
-            <nav class="menu">
-                <ul>
-                    <li><a href="maintenance.php"><img id="icon" src="../images/maintenance.png" alt="Maintenance icon"></a></li>
-                    <li><a href="home.php"><img id="icon" src="../images/home.png" alt="Home icon"></a></li>
-                    <li><a href="modifications.php"><img id="icon" src="../images/modifications.png" alt="Modification icon"></a></li>
-                </ul>
-            </nav>
-        </header>
-
         <div id="title-container">
             <h1><span>GARAGE</span></h1>
         </div>

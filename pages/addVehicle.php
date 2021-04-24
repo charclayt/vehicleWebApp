@@ -60,14 +60,14 @@ session_start();
 
         <form method="POST">
             <fieldset>
-                <ol>
+                <ul>
                     <li><label for="vehicle-make">Make:</label>
                     <input type="text" name="vehicle-make" id="vehicle-make"></li>
                     <li><label for="vehicle-model">Model:</label>
                     <input type="text" name="vehicle-model" id="vehicle-model"></li>
                     <li><label for="vehicle-manufacture-year">Year of manufacture:</label>
                     <input type="number" name="vehicle-manufacture-year" id="vehicle-manufacture-year"></li>
-                </ol>
+                </ul>
                 <p><input type="submit" value="Add vehicle"></p>
             </fieldset>
         </form>

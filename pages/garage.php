@@ -89,7 +89,7 @@ session_start();
                 }
                 else
                 {
-                    echo $selected_vehicle;
+                    echo "Select a vehicle";
                 }
                 ?>
             </div>

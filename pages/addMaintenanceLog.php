@@ -5,6 +5,26 @@ session_start();
     include("../php/functions.php");
 
     $user_data = check_login($con);
+
+    $selected_vehicle = selected_vehicle($con, $user_data['email']);
+
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        $vehicle_id = $selected_vehicle['id'];
+        $part_name = $_POST['part-name'];
+        $part_no = $_POST['part-number'];
+        $price = $_POST['price'];
+        $mileage = $_POST['mileage'];
+        $date = $_POST['date'];
+        $comment = $_POST['comment'];
+
+        $query = "INSERT INTO `maintenance_log` (`id`, `category`, `part_name`, `part_number`, `price`, `mileage`, `date`, `comment`, `image_filename`, `vehicle_id`) VALUES ('', '', '$part_name', '$part_no', '$price', '$mileage', '$date', '$comment', '', '$vehicle_id')";
+
+        mysqli_query($con, $query);
+
+        header("Location: ../pages/maintenance.php");
+        die;
+    }
 ?>
 
 <!DOCTYPE html>

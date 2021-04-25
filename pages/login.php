@@ -58,8 +58,8 @@ session_start();
 
         </header>
 
-        <form method="POST">
-            <!-- <fieldset>
+        <form method="POST" id="login_form">
+            <fieldset>
                 <legend>Welcome back!</legend>
                 <ul>
                     <li><label for="form-login-email">Email:</label>
@@ -68,14 +68,14 @@ session_start();
                     <input type="password" name="password" id="form-login-password"></li>
                 </ul>
                 <p><input type="submit" value="Log in"></p>
-                <a href="../pages/signup.html">Sign Up</a>
-            </fieldset> -->
-            <input type="email" name="email" id="email"><br>
+                <a href="./signup.php">Sign Up</a>
+            </fieldset>
+            <!-- <input type="email" name="email" id="email"><br>
             <input type="password" name="password" id="password"><br>
 
             <input type="submit" value="Log in"><br>
 
-            <a href="./signup.php">Sign Up</a>
+            <a href="./signup.php">Sign Up</a> -->
         </form>
     </div>
 </body>

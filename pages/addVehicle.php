@@ -58,7 +58,7 @@ session_start();
             <h1><span>ADD VEHICLE</span></h1>
         </div>
 
-        <form method="POST">
+        <form method="POST" id="add_vehicle_form">
             <fieldset>
                 <ul>
                     <li><label for="vehicle-make">Make:</label>

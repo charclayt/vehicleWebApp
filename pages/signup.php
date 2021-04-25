@@ -46,15 +46,15 @@ session_start();
 
         </header>
 
-        <form method="POST">
+        <form method="POST" id="signup_form">
             <fieldset>
                 <legend>Sign up</legend>
-                <ol>
+                <ul>
                     <li><label for="email">Email:</label>
                     <input type="email" name="email" id="email"></li>
                     <li><label for="password">Password:</label>
                     <input type="password" name="password" id="password"></li>
-                </ol>
+                </ul>
                 <p><input type="submit" value="Sign up"></p>
             </fieldset>
         </form>

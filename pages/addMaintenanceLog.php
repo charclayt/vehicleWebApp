@@ -54,7 +54,7 @@ session_start();
             <h1><span>ADD MAINTENANCE LOG</span></h1>
         </div>
 
-        <form method="POST">
+        <form method="POST" id="add_maintenance_log_form">
         <fieldset>
             <ul>
                 <li><label for="part-name">Part name</label>

@@ -7,6 +7,9 @@ session_start();
     $user_data = check_login($con);
 
     $selected_vehicle = selected_vehicle($con, $user_data['email']);
+
+    $query = "SELECT * FROM `modification_log` WHERE `vehicle_id` = '$selected_vehicle[id]' ORDER BY `id` DESC";
+    $result = mysqli_query($con, $query);
 ?>
 
 <!DOCTYPE html>
@@ -37,15 +40,21 @@ session_start();
         </div>
 
         <div id="content-container">
-            <div class="content">
-
-            </div>
-            <div class="content">
-
-            </div>
-            <div class="content">
-
-            </div>
+            <?php
+            if ($result->num_rows > 0) 
+            {
+                while($row = $result->fetch_assoc())
+                {
+                    echo "<div class='modification-content'>";
+                    echo "Part name: ", $row['part_name'], "<br>", "Part number: ",  $row['part_number'], "<br>", "Price: ", $row['price'], "<br>", "Mileage: ", $row['mileage'], "<br>", "Date: ", $row['date'], "<br>", "Comment: ", $row['comment'];
+                    echo "</div>";
+                }
+            }
+            else
+            {
+                echo "Add first modification log";
+            }
+            ?>
         </div>
 
         <div id="footer-container">

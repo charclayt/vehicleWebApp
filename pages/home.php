@@ -7,6 +7,12 @@ session_start();
     $user_data = check_login($con);
 
     $selected_vehicle = selected_vehicle($con, $user_data['email']);
+
+    $maintenance_query = mysqli_query($con, "SELECT * FROM `maintenance_log` WHERE `vehicle_id` = '$selected_vehicle[id]' ORDER BY `id` DESC LIMIT 1");
+    $maintenance_result =  mysqli_fetch_assoc($maintenance_query);
+
+    $modification_query = mysqli_query($con, "SELECT * FROM `modification_log` WHERE `vehicle_id` = '$selected_vehicle[id]' ORDER BY `id` DESC LIMIT 1");
+    $modification_result = mysqli_fetch_assoc($modification_query);
 ?>
 
 <!DOCTYPE html>
@@ -40,9 +46,33 @@ session_start();
         <div id="content-container">
             <div class="content">
                 <p>Recent maintenance</p>
+                <?php
+                if(!empty($maintenance_result))
+                {
+                    echo "<div id='recent_maintenance_home'>";
+                    echo "Part name: ", $maintenance_result['part_name'], "<br>", "Mileage: ", $maintenance_result['mileage'], "<br>", "Date: ", $maintenance_result['date'];
+                    echo "</div>";
+                }
+                else
+                {
+                    echo "Enter your first maintenance log to view most recent here!";
+                }
+                ?>
             </div>
             <div class="content">
                 <p>Recent modification</p>
+                <?php
+                if(!empty($modification_result))
+                {
+                    echo "<div id='recent_modification_home'>";
+                    echo "Part name: ", $modification_result['part_name'], "<br>", "Mileage: ", $modification_result['mileage'], "<br>", "Date: ", $modification_result['date'];
+                    echo "</div>";
+                }
+                else
+                {
+                    echo "Enter your first modification log to view most recent here!";
+                }
+                ?>
             </div>
             <div class="content">
                 <p>Savings tracker</p>

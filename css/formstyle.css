@@ -4,6 +4,33 @@ body {
     background-color: lightcoral;
 }
 
+/* Montserrat regular */
+@font-face {
+    font-family: "MontserratRegular";
+    src: url("./fonts/montserrat-regular-webfont.eot");
+    src: url("./fonts/montserrat-regular-webfont.woff") format("woff"),
+    url("./fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("./fonts/montserrat-regular-webfont.svg") format("svg");
+}
+
+/* Montserrat semi-bold */
+@font-face {
+    font-family: "MontserratSemiBold";
+    src: url("./fonts/montserrat-semibold-webfont.eot");
+    src: url("./fonts/montserrat-semibold-webfont.woff") format("woff"),
+    url("./fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+    url("./fonts/montserrat-semibold-webfont.svg") format("svg");
+}
+
+/* Montserrat bold */
+@font-face {
+    font-family: "MontserratBold";
+    src: url("./fonts/montserrat-bold-webfont.eot");
+    src: url("./fonts/montserrat-bold-webfont.woff") format("woff"),
+    url("./fonts/montserrat-bold-webfont.woff2") format("woff2"),
+    url("./fonts/montserrat-bold-webfont.svg") format("svg");
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -42,4 +69,25 @@ h1 {
     font-size: 1rem;
     text-align: center;
     margin: 0.4rem 0 0.2rem 0;
+}
+
+form>ul {
+    list-style-type: none;
+}
+
+#add_maintenance_log_form>ul>li>label {
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+input[type=text] {
+    width: 50%;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 250px;
 }

@@ -4,6 +4,33 @@ body {
     border: 0;
 }
 
+/* Montserrat regular */
+@font-face {
+    font-family: "MontserratRegular";
+    src: url("./fonts/montserrat-regular-webfont.eot");
+    src: url("./fonts/montserrat-regular-webfont.woff") format("woff"),
+    url("./fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("./fonts/montserrat-regular-webfont.svg") format("svg");
+}
+
+/* Montserrat semi-bold */
+@font-face {
+    font-family: "MontserratSemiBold";
+    src: url("./fonts/montserrat-semibold-webfont.eot");
+    src: url("./fonts/montserrat-semibold-webfont.woff") format("woff"),
+    url("./fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+    url("./fonts/montserrat-semibold-webfont.svg") format("svg");
+}
+
+/* Montserrat bold */
+@font-face {
+    font-family: "MontserratBold";
+    src: url("./fonts/montserrat-bold-webfont.eot");
+    src: url("./fonts/montserrat-bold-webfont.woff") format("woff"),
+    url("./fonts/montserrat-bold-webfont.woff2") format("woff2"),
+    url("./fonts/montserrat-bold-webfont.svg") format("svg");
+}
+
 .container {
     display: flex;
     height: 100vh;

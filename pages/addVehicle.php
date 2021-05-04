@@ -62,11 +62,20 @@ session_start();
             <fieldset>
                 <ul>
                     <li><label for="vehicle-make">Make:</label>
+                    <br>
                     <input type="text" name="vehicle-make" id="vehicle-make"></li>
+                    <br>
+                    <br>
                     <li><label for="vehicle-model">Model:</label>
+                    <br>
                     <input type="text" name="vehicle-model" id="vehicle-model"></li>
+                    <br>
+                    <br>
                     <li><label for="vehicle-manufacture-year">Year of manufacture:</label>
+                    <br>
                     <input type="number" name="vehicle-manufacture-year" id="vehicle-manufacture-year"></li>
+                    <br>
+                    <br>
                 </ul>
                 <p><input type="submit" value="Add vehicle"></p>
             </fieldset>

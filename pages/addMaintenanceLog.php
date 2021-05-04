@@ -55,22 +55,38 @@ session_start();
         </div>
 
         <form method="POST" id="add_maintenance_log_form">
-        <fieldset>
-            <ul>
-                <li><label for="part-name">Part name</label>
-                <input type="text" name="part-name" id="part-name"></li>
-                <li><label for="part-number">Part number</label>
-                <input type="text" name="part-number" id="part-number"></li>
-                <li><label for="price">Price</label>
-                <input type="number" name="price" id="price"></li>
-                <li><label for="mileage">Mileage</label>
-                <input type="number" name="mileage" id="mileage"></li>
-                <li><label for="date">Date</label>
-                <input type="date" name="date" id="date"></li>
-                <li><textarea name="comment" id="comment">Comment</textarea>
-            </ul>
+        <ul>
+            <li><label for="part-name">Part name</label>
+            <br>
+            <input type="text" name="part-name" id="part-name"></li>
+            <br>
+            <br>
+            <li><label for="part-number">Part number</label>
+            <br>
+            <input type="text" name="part-number" id="part-number"></li>
+            <br>
+            <br>
+            <li><label for="price">Price</label>
+            <br>
+            <input type="number" name="price" id="price"></li>
+            <br>
+            <br>
+            <li><label for="mileage">Mileage</label>
+            <br>
+            <input type="number" name="mileage" id="mileage"></li>
+            <br>
+            <br>
+            <li><label for="date">Date</label>
+            <br>
+            <input type="date" name="date" id="date"></li>
+            <br>
+            <br>
+            <li><label for="comment">Comment</label>
+            <br>
+            <textarea name="comment" id="comment">Comment</textarea></li>
+            <br>
+        </ul>
             <p><input type="submit" value="Add maintenance log"></p>
-        </fieldset>
         </form>
     </div>
 </body>

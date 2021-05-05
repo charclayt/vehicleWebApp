@@ -58,11 +58,11 @@ session_start();
         <h1>Welcome back!</h1>
         </header>
 
-        <div id="logo container">
-            <img id="" src="" alt="logo">
-        </div>
-
         <form method="POST" id="login_form">
+            <div id="logo container">
+                <img id="" src="" alt="logo">
+            </div>
+
             <ul>
                 <li><label for="form-login-email">Email:</label>
                 <br>
@@ -75,7 +75,7 @@ session_start();
             </ul>
                 <p><input type="submit" value="Log in"></p>
                 <br>
-                <a href="./signup.php">Sign Up</a>
+                <a href="./signup.php">Don't have an account? Sign Up!</a>
         </form>
     </div>
 </body>

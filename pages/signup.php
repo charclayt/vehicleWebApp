@@ -42,21 +42,26 @@ session_start();
 
 <body>
     <div class="container">
-        <header id="header">
+        <header id="signup_header">
 
         </header>
 
         <form method="POST" id="signup_form">
-            <fieldset>
-                <legend>Sign up</legend>
-                <ul>
-                    <li><label for="email">Email:</label>
-                    <input type="email" name="email" id="email"></li>
-                    <li><label for="password">Password:</label>
-                    <input type="password" name="password" id="password"></li>
-                </ul>
+            <div id="logo_container">
+                <img id="" src="" alt="logo">
+            </div>
+                
+            <ul>
+                <li><label for="email">Email:</label>
+                <br>
+                <input type="email" name="email" id="email"></li>
+                <br>
+                <li><label for="password">Password:</label>
+                <br>
+                <input type="password" name="password" id="password"></li>
+                <br>
+            </ul>
                 <p><input type="submit" value="Sign up"></p>
-            </fieldset>
         </form>
     </div>
 </body>

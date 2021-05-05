@@ -143,11 +143,15 @@ a {
     flex: 0.5;
 }
 
+#login_form {
+    flex: 5;
+}
+
 #login_header>h1 {
     font-family: "MontserratBold", sans-serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 2.3rem;
+    font-size: 2rem;
     padding-top: 2.5%;
     text-transform: uppercase;
 }
@@ -160,6 +164,10 @@ a {
 /* SIGN UP PAGE STYLING */
 #signup_header {
     flex: 0.5;
+}
+
+#signup_form {
+    flex: 5;
 }
 
 #signup_form>ul {

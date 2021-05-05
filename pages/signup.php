@@ -48,7 +48,7 @@ session_start();
 
         <form method="POST" id="signup_form">
             <div id="logo_container">
-                <img id="" src="" alt="logo">
+                <img id="logo" src="" alt="logo">
             </div>
                 
             <ul>

@@ -59,8 +59,8 @@ session_start();
         </header>
 
         <form method="POST" id="login_form">
-            <div id="logo container">
-                <img id="" src="" alt="logo">
+            <div id="logo_container">
+                <img id="logo" src="" alt="logo">
             </div>
 
             <ul>

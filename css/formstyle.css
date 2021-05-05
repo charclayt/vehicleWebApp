@@ -97,6 +97,7 @@ input {
     width: 50%;
     -webkit-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;
+    text-align: center;
 }
 
 input:focus {

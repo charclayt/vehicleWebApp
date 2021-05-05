@@ -85,12 +85,6 @@ body {
     /* */
 }
 
-.garage-content {
-    display: flex;
-    padding-top: 15%;
-    padding-left: 10%;
-}
-
 h1 {
     font-size: 1rem;
     text-align: center;
@@ -100,4 +94,35 @@ h1 {
 img#icon {
     max-width: 100%;
     height: auto;
+}
+
+
+/* GARAGE PAGE STYLING */
+#garage-title-container {
+    flex: 0.5;
+}
+
+#garage-title-container>h1 {
+    font-family: "MontserratBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+}
+
+.garage-content {
+    display: flex;
+    padding-top: 15%;
+}
+
+.garage-content>form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.garage-content>form>p {
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
 }

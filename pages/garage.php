@@ -51,7 +51,7 @@ session_start();
 
 <body>
     <div class="container">
-        <div id="title-container">
+        <div id="garage-title-container">
             <h1><span>GARAGE</span></h1>
         </div>
 
@@ -63,7 +63,7 @@ session_start();
                     {
 			            echo "<div class='garage-content'>";
                         echo "<form method='POST'>";
-                        echo $row['make'] , " ", $row['model'], " ", $row['manufacture_year'] ,"<br>";
+                        echo "<p>", $row['make'] , " ", $row['model'], " ", $row['manufacture_year'] ,"</p>", "<br>";
                         echo "<input type='hidden' id='select_vehicle' name='select_vehicle' value='{$row['id']}'>";
                         echo "<input type='submit' value='Select vehicle'>";
                         echo "</form>";

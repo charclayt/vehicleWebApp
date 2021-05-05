@@ -46,7 +46,7 @@ session_start();
 
         </header>
 
-        <form method="POST" id="signup_form">
+        <form method="POST" id="signup_form" autocomplete="off">
             <div id="logo_container">
                 <img id="logo" src="" alt="logo">
             </div>

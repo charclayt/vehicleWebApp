@@ -58,7 +58,7 @@ session_start();
         <h1>Welcome back!</h1>
         </header>
 
-        <form method="POST" id="login_form">
+        <form method="POST" id="login_form" autocomplete="off">
             <div id="logo_container">
                 <img id="logo" src="" alt="logo">
             </div>

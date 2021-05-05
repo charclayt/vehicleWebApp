@@ -46,13 +46,15 @@ session_start();
                 while($row = $result->fetch_assoc())
                 {
                     echo "<div class='modification-content'>";
-                    echo "Part name: ", $row['part_name'], "<br>", "Part number: ",  $row['part_number'], "<br>", "Price: ", $row['price'], "<br>", "Mileage: ", $row['mileage'], "<br>", "Date: ", $row['date'], "<br>", "Comment: ", $row['comment'];
+                    echo "<p>", "Part name: ", $row['part_name'], "<br>", "Part number: ",  $row['part_number'], "<br>", "Price: ", $row['price'], "<br>", "Mileage: ", $row['mileage'], "<br>", "Date: ", $row['date'], "<br>", "Comment: ", $row['comment'], "</p>";
                     echo "</div>";
                 }
             }
             else
             {
-                echo "Add first modification log";
+                echo "<div class='no-content'>";
+                echo "<p>", "No modification logs to display!", "</p>";
+                echo "</div>";
             }
             ?>
         </div>

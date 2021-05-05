@@ -45,37 +45,37 @@ session_start();
 
         <div id="content-container">
             <div class="content">
-                <p>Recent maintenance</p>
+                <h2>Recent maintenance</h2>
                 <?php
                 if(!empty($maintenance_result))
                 {
                     echo "<div id='recent_maintenance_home'>";
-                    echo "Part name: ", $maintenance_result['part_name'], "<br>", "Mileage: ", $maintenance_result['mileage'], "<br>", "Date: ", $maintenance_result['date'];
+                    echo "<p>", "Part name: ", $maintenance_result['part_name'], "<br>", "Mileage: ", $maintenance_result['mileage'], "<br>", "Date: ", $maintenance_result['date'], "</p>";
                     echo "</div>";
                 }
                 else
                 {
-                    echo "Enter your first maintenance log to view most recent here!";
+                    echo "<p>", "Enter your first maintenance log to view most recent here!", "</p>";
                 }
                 ?>
             </div>
             <div class="content">
-                <p>Recent modification</p>
+                <h2>Recent modification</h2>
                 <?php
                 if(!empty($modification_result))
                 {
                     echo "<div id='recent_modification_home'>";
-                    echo "Part name: ", $modification_result['part_name'], "<br>", "Mileage: ", $modification_result['mileage'], "<br>", "Date: ", $modification_result['date'];
+                    echo "<p>", "Part name: ", $modification_result['part_name'], "<br>", "Mileage: ", $modification_result['mileage'], "<br>", "Date: ", $modification_result['date'], "</p>";
                     echo "</div>";
                 }
                 else
                 {
-                    echo "Enter your first modification log to view most recent here!";
+                    echo "<p>", "Enter your first modification log to view most recent here!", "</p>";
                 }
                 ?>
             </div>
             <div class="content">
-                <p>Savings tracker</p>
+                <h2>Savings tracker</h2>
                 <p>Hello, <?php echo $user_data['email']; ?></p>
                 <p> <a href="../php/logout.php">Logout</a></p>
             </div>

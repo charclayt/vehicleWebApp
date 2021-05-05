@@ -99,9 +99,40 @@ h1 {
     margin: 0.4rem 0 0.2rem 0;
 }
 
+h2 {
+    font-family: "MontserratSemiBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+p {
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 0 5% 0 5%;
+}
+
 img#icon {
     max-width: 100%;
     height: auto;
+}
+
+
+/* TEXT DISPLAY IF NO LOGS ARE PRESENT */
+.no-content {
+    display: flex;
+}
+
+.no-content>p {
+    margin: 0 auto;
+    padding-top: 50%;
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
 }
 
 
@@ -134,6 +165,7 @@ img#icon {
 
 .garage-content>form>p {
     margin: 0;
+    max-width: 13rem;
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -152,3 +184,31 @@ input {
 }
 
 
+/* MAINTENANCE PAGE STYLING */
+.maintenance-content {
+    display: flex;
+    padding-top: 10%;
+}
+
+.maintenance-content>p {
+    margin: 0 15%;
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+
+/* MODIFICATION PAGE STYLING */
+.modification-content {
+    display: flex;
+    padding-top: 10%;
+}
+
+.modification-content>p {
+    margin: 0 15%;
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}

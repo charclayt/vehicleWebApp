@@ -54,28 +54,28 @@ session_start();
 
 <body>
     <div class="container">
-        <header id="header">
-
+        <header id="login_header">
+        <h1>Welcome back!</h1>
         </header>
 
+        <div id="logo container">
+            <img id="" src="" alt="logo">
+        </div>
+
         <form method="POST" id="login_form">
-            <fieldset>
-                <legend>Welcome back!</legend>
-                <ul>
-                    <li><label for="form-login-email">Email:</label>
-                    <input type="email" name="email" id="form-login-email"></li>
-                    <li><label for="form-login-password">Password:</label>
-                    <input type="password" name="password" id="form-login-password"></li>
-                </ul>
+            <ul>
+                <li><label for="form-login-email">Email:</label>
+                <br>
+                <input type="email" name="email" id="form-login-email"></li>
+                <br>
+                <li><label for="form-login-password">Password:</label>
+                <br>
+                <input type="password" name="password" id="form-login-password"></li>
+                <br>
+            </ul>
                 <p><input type="submit" value="Log in"></p>
+                <br>
                 <a href="./signup.php">Sign Up</a>
-            </fieldset>
-            <!-- <input type="email" name="email" id="email"><br>
-            <input type="password" name="password" id="password"><br>
-
-            <input type="submit" value="Log in"><br>
-
-            <a href="./signup.php">Sign Up</a> -->
         </form>
     </div>
 </body>

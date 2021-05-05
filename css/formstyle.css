@@ -86,13 +86,6 @@ form>ul {
     list-style-type: none;
 }
 
-#add_maintenance_log_form>ul>li>label {
-    font-family: "MontserratRegular", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 1rem;
-}
-
 form>p>input {
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;
@@ -100,13 +93,48 @@ form>p>input {
     font-size: 1rem;
 }
 
-input[type=text], input[type=number], textarea[name=comment] {
+input {
     width: 50%;
     -webkit-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;
 }
 
-input[type=text]:focus, input[type=number]:focus, textarea[name=comment]:focus {
+input:focus {
     width: 250px;
+}
+
+
+/* MAINTENANCE / MODIFICATION LOG FORM STYLING */
+#add_maintenance_log_form>ul>li>label {
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+#add_modification_log_form>ul>li>label {
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+
+/* LOGIN PAGE STYLING */
+#login_header {
+    flex: 0.5;
+}
+
+#login_header>h1 {
+    font-family: "MontserratBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.3rem;
+    padding-top: 2.5%;
+    text-transform: uppercase;
+}
+
+#login_form>ul {
+    padding-top: 25%
 }
 

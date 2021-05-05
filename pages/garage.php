@@ -81,7 +81,7 @@ session_start();
             <div class="icon-link">
                 <a href="addVehicle.php"><img id="addLog-icon" src="../images/add.png" alt="Add log icon"></a>
             </div>
-            <div class="content">
+            <div class="selected-vehicle-info">
                 <?php
                 if (!empty($selected_vehicle))
                 {

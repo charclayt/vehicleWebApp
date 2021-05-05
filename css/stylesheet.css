@@ -82,7 +82,12 @@ body {
 }
 
 .selected-vehicle-info {
-    /* */
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: auto auto;
 }
 
 h1 {
@@ -107,22 +112,40 @@ img#icon {
     font-weight: normal;
     font-style: normal;
     font-size: 2.3rem;
+    padding-top: 0.5%;
     text-transform: uppercase;
 }
 
 .garage-content {
     display: flex;
-    padding-top: 15%;
+    padding-top: 10%;
 }
 
 .garage-content>form {
     margin: 0 auto;
+    padding: 2% 5%;
     text-align: center;
+    border: 0.16rem solid white;
+    border-radius: 5px;
 }
 
 .garage-content>form>p {
+    margin: 0;
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+input {
+    width: 13rem;
+    border-radius: 5px;
+    border: none;
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 1rem;
 }
+
+

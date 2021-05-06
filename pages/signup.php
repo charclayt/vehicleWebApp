@@ -23,7 +23,7 @@ session_start();
             
         else
         {
-            echo "please enter valid information";
+            echo "<p id='error_message'>", "please enter valid information", "</p>";
         }
     }
 

@@ -31,12 +31,12 @@ session_start();
                 }
             }
 
-            echo "Wrong username or Password!";      
+            echo "<p id='error_message'>", "Wrong username or Password!", "</p>";      
         }
             
         else
         {
-            echo "Wrong username or Password!";
+            echo "<p id='error_message'>", "Wrong username or Password!", "</p>";
         }
     }
 ?>

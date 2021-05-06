@@ -126,6 +126,15 @@ a {
     font-size: 1rem;
 }
 
+p#error_message {
+    font-family: "MontserratRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
 
 /* LOGO STYLING */
 #logo_container {

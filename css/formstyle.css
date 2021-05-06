@@ -135,7 +135,7 @@ a {
 
 #logo {
     margin: 0 auto;
-    padding-top: 7%;
+    padding-top: 18%;
     width: 50%;
     height: auto;
 }
@@ -143,38 +143,37 @@ a {
 
 /* LOGIN PAGE STYLING */
 #login_header {
-    flex: 0.5;
+    flex: none;
 }
 
 #login_form {
     flex: 5;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 #login_header>h1 {
-    font-family: "MontserratBold", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2rem;
-    padding-top: 2.5%;
-    text-transform: uppercase;
+    display: none;
 }
 
 #login_form>ul {
-    padding-top: 10%
+    padding-top: 20%
 }
 
 
 /* SIGN UP PAGE STYLING */
 #signup_header {
-    flex: 0.5;
+    flex: none;
 }
 
 #signup_form {
     flex: 5;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 #signup_form>ul {
-    padding-top: 10%;
+    padding-top: 20%;
 }
 
 

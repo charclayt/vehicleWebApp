@@ -135,6 +135,9 @@ a {
 
 #logo {
     margin: 0 auto;
+    padding-top: 7%;
+    width: 50%;
+    height: auto;
 }
 
 
@@ -157,7 +160,7 @@ a {
 }
 
 #login_form>ul {
-    padding-top: 25%
+    padding-top: 10%
 }
 
 
@@ -171,7 +174,7 @@ a {
 }
 
 #signup_form>ul {
-    padding-top: 25%;
+    padding-top: 10%;
 }
 
 

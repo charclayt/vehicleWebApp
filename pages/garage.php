@@ -72,7 +72,7 @@ session_start();
                 }
                 else
                 {
-                    echo "Please add new vehicle";
+                    echo "<p>", "Please add new vehicle", "</p>";
                 }
                 ?>
         </div>

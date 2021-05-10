@@ -31,6 +31,7 @@ body {
     url("./fonts/montserrat-bold-webfont.svg") format("svg");
 }
 
+/* Container for all other elements */
 .container {
     display: flex;
     height: 100vh;
@@ -39,6 +40,7 @@ body {
     align-items: stretch;
 }
 
+/* Menu container. Menu items reformatted to display as flex and inline */
 .menu>ul {
     display: flex;
     flex-flow: row nowrap;
@@ -47,20 +49,24 @@ body {
     margin: .75rem 0 0 0;
 }
 
+/* Menu list items evenly spaced across navigation */
 .menu>ul>li {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Title container spacing and background colour */
 #title-container {
     flex: 0.25;
     background-color: white;
 }
 
+/* Header container spacing */
 header {
     flex: 0.25;
 }
 
+/* Form spacing to fill page, spacing to center in container, other formatting added */
 form {
     flex: 4;
     border-top-left-radius: 1rem;
@@ -71,11 +77,13 @@ form {
     text-align: center;
 }
 
+/* Padding for top of form */
 form>ul {
     padding: 5% 0 0 0;
     margin: 0;
 }
 
+/* h1 formatting */
 h1 {
     font-family: "MontserratBold", sans-serif;
     font-weight: normal;
@@ -85,10 +93,12 @@ h1 {
     margin: 0.4rem 0 0.2rem 0;
 }
 
+/* Remove styling for form ul */
 form>ul {
     list-style-type: none;
 }
 
+/* input font formatting */
 form>p>input {
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;
@@ -96,6 +106,7 @@ form>p>input {
     font-size: 1rem;
 }
 
+/* input box formatting */
 input {
     width: 50%;
     -webkit-transition: width .35s ease-in-out;
@@ -104,14 +115,17 @@ input {
     border-radius: 5px;
 }
 
+/* input box changes width size when clicked (focused) */
 input:focus {
     width: 250px;
 }
 
+/* remove border for submit button */
 input[type="submit"] {
     border: none;
 }
 
+/* label font formatting */
 label {
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;
@@ -119,6 +133,7 @@ label {
     font-size: 1rem;
 }
 
+/* link font formatting */
 a {
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;
@@ -126,6 +141,7 @@ a {
     font-size: 1rem;
 }
 
+/* Error message font formatting and spacing / aligning */
 p#error_message {
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;

@@ -31,6 +31,7 @@ body {
     url("./fonts/montserrat-bold-webfont.svg") format("svg");
 }
 
+/* Container for all other elements */
 .container {
     display: flex;
     height: 100vh;
@@ -39,6 +40,7 @@ body {
     align-items: stretch;
 }
 
+/* Menu container. Menu items reformatted to display as flex and inline */
 .menu>ul {
     display: flex;
     flex-flow: row nowrap;
@@ -47,21 +49,25 @@ body {
     margin: .75rem 0 0 0;
 }
 
+/* Menu list items evenly spaced across navigation */
 .menu>ul>li {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Header container spacing and recolour */
 #header {
     flex: 0.25;
     background-color: white;
 }
 
+/* Title container spacing and background colour */
 #title-container {
     flex: 0.25;
     background-color: white;
 }
 
+/* Content container spacing, recolour and other formatting */
 #content-container {
     flex: 4.5;
     border-top-left-radius: 1rem;
@@ -70,6 +76,7 @@ body {
     overflow: scroll;
 }
 
+/* Footer container formatting for icon links and current selected vehicle */
 #footer-container {
     flex: 0.5;
     display: flex;
@@ -77,10 +84,12 @@ body {
     orientation: fixed;
 }
 
+/* Icon link spacing within footer container */
 .icon-link {
     padding: 0.75rem;
 }
 
+/* Current selected vehicle info formatting */
 .selected-vehicle-info {
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;
@@ -90,6 +99,7 @@ body {
     margin: auto auto;
 }
 
+/* h1 formatting */
 h1 {
     font-family: "MontserratBold", sans-serif;
     font-weight: normal;
@@ -99,6 +109,7 @@ h1 {
     margin: 0.4rem 0 0.2rem 0;
 }
 
+/* h2 formatting */
 h2 {
     font-family: "MontserratSemiBold", sans-serif;
     font-weight: normal;
@@ -107,6 +118,7 @@ h2 {
     text-align: center;
 }
 
+/* p formatting */
 p {
     font-family: "MontserratRegular", sans-serif;
     font-weight: normal;
@@ -115,6 +127,7 @@ p {
     padding: 0 5% 0 5%;
 }
 
+/* Icon sizing */
 img#icon {
     max-width: 100%;
     height: auto;
